@@ -1,39 +1,61 @@
-Introduction
-This assignment aims to give you an idea of applying EDA in a real business scenario. In this assignment, apart from applying the techniques that you have learnt in the EDA module, you will also develop a basic understanding of risk analytics in banking and financial services and understand how data is used to minimise the risk of losing money while lending to customers.
+# 📊 Exploratory Data Analysis (EDA) in Risk Analytics  
 
- 
+## 📝 Project Overview  
 
-Business Understanding
-The loan providing companies find it hard to give loans to the people due to their insufficient or non-existent credit history. Because of that, some consumers use it as their advantage by becoming a defaulter. Suppose you work for a consumer finance company which specialises in lending various types of loans to urban customers. You have to use EDA to analyse the patterns present in the data. This will ensure that the applicants capable of repaying the loan are not rejected.
+This project focuses on **Exploratory Data Analysis (EDA) in risk analytics for banking and financial services**. The objective is to analyze **loan applicants' data** and identify factors that influence **loan default risks**. Using **EDA techniques**, we explore patterns, detect outliers, handle missing values, and derive insights that help financial institutions make informed lending decisions.  
 
- 
+## 🎯 Business Problem  
 
-When the company receives a loan application, the company has to decide for loan approval based on the applicant’s profile. Two types of risks are associated with the bank’s decision:
+Lending companies face challenges in approving loans due to **insufficient credit history** of applicants. This can result in:  
+- **Loss of business** if eligible applicants are rejected.  
+- **Financial loss** if high-risk applicants default on loans.  
 
-If the applicant is likely to repay the loan, then not approving the loan results in a loss of business to the company
+The goal of this analysis is to:  
+✔ **Identify key factors affecting loan default**  
+✔ **Develop risk-based lending strategies** (e.g., higher interest rates for risky applicants)  
+✔ **Ensure fair loan approvals for creditworthy applicants**  
 
-If the applicant is not likely to repay the loan, i.e. he/she is likely to default, then approving the loan may lead to a financial loss for the company.
+## 📂 Dataset Details  
 
- 
+The dataset consists of **three files**:  
 
-The data given below contains the information about the loan application at the time of applying for the loan. It contains two types of scenarios:
+1️⃣ **`application_data.csv`** – Contains applicant details at the time of loan application.  
+2️⃣ **`previous_application.csv`** – Historical loan application records for each client.  
+3️⃣ **`columns_description.csv`** – Data dictionary explaining all variables.  
 
-The client with payment difficulties: he/she had late payment more than X days on at least one of the first Y instalments of the loan in our sample,
+## 🔍 Key Analysis Steps  
 
-All other cases: All other cases when the payment is paid on time.
+### 1️⃣ Data Cleaning & Preprocessing  
+✅ Handle **missing values** by appropriate imputation/removal strategies  
+✅ Identify **outliers** and assess their impact on analysis  
+✅ Check for **data imbalance** in loan approval and default categories  
 
- 
+### 2️⃣ Univariate & Bivariate Analysis  
+✅ Explore **distributions of numerical & categorical variables**  
+✅ Perform **segmented analysis** for applicants with/without payment difficulties  
+✅ Compare loan approval patterns based on income, credit history, etc.  
 
- 
+### 3️⃣ Correlation Analysis  
+✅ Identify **top 10 correlated variables** impacting loan default risk  
+✅ Segment data based on **loan defaulters vs. non-defaulters**  
 
-When a client applies for a loan, there are four types of decisions that could be taken by the client/company):
+### 4️⃣ Data Visualization  
+✅ Use **histograms, box plots, heatmaps, and bar charts** for insights  
+✅ Compare approval rates, loan amounts, and repayment behavior  
 
-Approved: The Company has approved loan Application
+## 📌 Results & Business Insights  
 
-Cancelled: The client cancelled the application sometime during approval. Either the client changed her/his mind about the loan or in some cases due to a higher risk of the client he received worse pricing which he did not want.
+- High **income-to-loan ratio** applicants have **lower default risk**  
+- Applicants with **previously rejected loans** are **more likely to default**  
+- Higher **loan amounts & longer tenure** increase **default probability**  
+- **Data imbalance** is observed between defaulters & non-defaulters  
 
-Refused: The company had rejected the loan (because the client does not meet their requirements etc.).
+## 🛠 Technologies Used  
 
-Unused offer:  Loan has been cancelled by the client but on different stages of the process.
+- **Programming**: Python (Pandas, NumPy, Matplotlib, Seaborn)  
+- **EDA & Analysis**: Jupyter Notebook, Tableau (for visualizations)  
 
-In this case study, you will use EDA to understand how consumer attributes and loan attributes influence the tendency of default.
+## 📁 Files Included  
+
+📜 `EDA_Loan_Default.ipynb` → Jupyter Notebook with **code & insights**  
+📂 `datasets/` → Contains raw loan application datasets  
